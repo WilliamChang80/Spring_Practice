@@ -1,6 +1,6 @@
 package com.latiah.spring.demo.domain;
 
-import com.latiah.spring.demo.domain.baseEntity.BaseEntity;
+import com.latiah.spring.demo.domain.base.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 @NoArgsConstructor
 public class Store extends BaseEntity {
     private String storeName;
-    private String storeLocation;
+    private String storeAddress;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Food> food;

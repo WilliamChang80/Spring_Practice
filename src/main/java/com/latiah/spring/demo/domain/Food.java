@@ -1,6 +1,6 @@
 package com.latiah.spring.demo.domain;
 
-import com.latiah.spring.demo.domain.baseEntity.BaseEntity;
+import com.latiah.spring.demo.domain.base.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;

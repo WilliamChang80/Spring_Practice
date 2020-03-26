@@ -1,6 +1,6 @@
 package com.latiah.spring.demo.domain;
 
-import com.latiah.spring.demo.domain.baseEntity.BaseEntity;
+import com.latiah.spring.demo.domain.base.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -13,15 +13,14 @@ import java.util.List;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-public class Order extends BaseEntity {
+public class Receipt extends BaseEntity {
     @OneToOne
     private User user;
 
-    private Date orderDate;
-    private int orderPrice;
-    private String orderLocation;
+    private Date receiptDate;
+    private int receiptPrice;
 
-    private OrderStatus orderStatus;
+    private OrderStatus receiptStatus;
 
     @OneToOne
     private Store store;

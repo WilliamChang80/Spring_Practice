@@ -1,4 +1,4 @@
-package com.latiah.spring.demo.domain.baseEntity;
+package com.latiah.spring.demo.domain.base;
 
 
 import lombok.Data;
