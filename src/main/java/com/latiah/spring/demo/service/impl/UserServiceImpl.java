@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getUserByID(Long id) {
-        return userRepository.findById(id).orElseThrow(()-> new RuntimeException("Data Not Found!"));
+        return userRepository.findById(id).orElse(null);
     }
 
     @Override
