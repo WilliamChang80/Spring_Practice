@@ -1,5 +1,6 @@
 package com.latiah.spring.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.latiah.spring.demo.domain.base.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,14 +18,17 @@ public class Receipt extends BaseEntity {
     @OneToOne
     private User user;
 
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private Date receiptDate;
+
     private int receiptPrice;
 
+    @Enumerated
     private OrderStatus receiptStatus;
 
     @OneToOne
     private Store store;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     private List<Food> food;
 }
